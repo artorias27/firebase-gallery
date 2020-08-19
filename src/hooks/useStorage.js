@@ -17,11 +17,23 @@ const useStorage = (file) => {
             setError(err);
         }, async() => {
             const url = await storageRef.getDownloadURL();
+            const imgObj = await getImgDimensons(url);    // get image's metadata
+            let width = imgObj.width;
+            let height = imgObj.height;
             const createdAt = timestamp();
             const name = file.name;
-            collectionRef.add({ url, createdAt, name });
+            collectionRef.add({ url, createdAt, name, width, height });
             setUrl(url);
         });
+
+        const getImgDimensons = (url) => {
+            return new Promise((resolve, reject) => {
+                let img = new Image();
+                img.onload = () => resolve(img);     // onload fires immediately and will not hold values outside onload
+                img.onerror = () => reject("Metadata cannot be loaded!");
+                img.src = url;
+            })
+        }
     }, [file]);
 
     return { progress, url, error };

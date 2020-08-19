@@ -12,7 +12,7 @@ const UploadForm = () => {
   const compressImg = async (img) => {
     let compressedImg = await compressor.compress([img], {
       size: 2,
-      quality: .8,
+      quality: .75,
       maxWidth: 1920,
       maxHeight: 1920,
       resize: true
