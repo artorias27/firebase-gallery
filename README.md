@@ -1,3 +1,5 @@
+A photo gallery, which one can upload and view in carousel. (The image's quality will be reduced to 75%)
+Connected with firebase storage and uses compress.js, react-photo-gallery, framer-motion
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
