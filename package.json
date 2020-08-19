@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "compress.js": "^1.1.2",
     "firebase": "^7.17.2",
+    "framer-motion": "^2.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-images": "^1.1.7",

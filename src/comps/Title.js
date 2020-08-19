@@ -5,7 +5,7 @@ const Title = () => {
     <div className="title">
       <h1>React Gallery</h1>
       <h2>Wallpapers</h2>
-      <p>Just a test for improving skills</p>
+      <p>Photos with compressed sizes. Be careful with white-space PNGs!</p>
     </div>
   )
 }

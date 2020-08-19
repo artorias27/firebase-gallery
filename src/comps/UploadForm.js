@@ -5,7 +5,7 @@ const Compress = require("compress.js");
 const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
-  const types = ["image/jpeg"];
+  const types = ["image/jpeg", "image/png"];
 
   const compressor = new Compress();
   // compress image func will return new image
@@ -38,7 +38,7 @@ const UploadForm = () => {
       setError("");
     } else {
       setFile(null);
-      setError("Please select JPEG only!");
+      setError("Please select JPEG & PNG only!");
     }
   }
 
