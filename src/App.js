@@ -39,7 +39,7 @@ function App() {
       <Title />
       <UploadForm />
       <motion.div className="img-wrapper" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5}} >
-        <Gallery photos={photos} onClick={openLightBox} initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1}} />
+        <Gallery photos={photos} onClick={openLightBox} />
         <ModalGateway>{modal}</ModalGateway>
       </motion.div>
     </div>
